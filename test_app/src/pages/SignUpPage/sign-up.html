@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>signUp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <ion-thumbnail item-start>
+          <img center src="assets/imgs/signup2.png" />
+        </ion-thumbnail>
+        <ion-item>
+          <ion-label floating color="secondary">Full Name</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.fullName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating color="secondary">Phone Number</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.phoneNo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating color="secondary">E-mail</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating color="secondary">Password</ion-label>
+          <ion-input
+            type="password"
+            [(ngModel)]="userData.password"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating color="secondary">Confirm Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <button
+          ion-button
+          color="secondary"
+          round
+          block
+          (click)="postUserData()"
+        >
+          Create Account
+        </button>
+        <p>
+          Already have an Account?<a [navPush]="return_to_login"> Log In </a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

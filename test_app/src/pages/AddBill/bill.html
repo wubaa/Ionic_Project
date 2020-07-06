@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Add your bill Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding
+  ><ion-grid col-md-6 offset-md-3>
+    <ion-row>
+      <ion-col size="6">
+        <ion-avatar item-start>
+          <img src="assets/imgs/camera.png" (click)="openCamera()" />
+        </ion-avatar>
+        <ion-item>
+          <ion-label floating color="secondary">Enter Product Name</ion-label>
+          <ion-input type="text" [(ngModel)]="billDetails.billName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary">Enter Start Date:</ion-label>
+          <ion-datetime
+            display-format="DD.MM.YYYY"
+            max="2030-12-30"
+            [(ngModel)]="billDetails.startDate"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary">Enter End Date:</ion-label>
+          <ion-datetime
+            display-format="DD.MM.YYYY"
+            max="2030-12-30"
+            [(ngModel)]="billDetails.endData"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary">Enter Reminder Date:</ion-label>
+          <ion-datetime
+            display-format="DD.MM.YYYY"
+            max="2030-12-30"
+            [(ngModel)]="billDetails.reminderDate"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-textarea
+            placeholder="Write About Product..."
+            [(ngModel)]="billDetails.aboutBill"
+          ></ion-textarea>
+        </ion-item>
+
+        <button
+          ion-button
+          color="secondary"
+          icon-start
+          round
+          block
+          block
+          (click)="return_to_view()"
+        >
+          <ion-icon name="cloud-upload-outline"></ion-icon>
+          UpLoad
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

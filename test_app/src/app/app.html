@@ -1,0 +1,48 @@
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner">
+    <div class="cube1"></div>
+    <div class="cube2"></div>
+  </div>
+</div>
+
+<div [class]="selectedTheme">
+  <ion-menu [content]="content" type="overlay">
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <div class="img2">
+        <img class="img" src="../assets/imgs/green.png" />
+      </div>
+      <ion-label text-center (click)="profile()">view your profile</ion-label>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <ion-item>
+        <ion-label
+          >Dark Mode
+          <ion-fab right bottom>
+            <ion-icon name="sunny" (click)="toggleAppTheme()"></ion-icon>
+          </ion-fab>
+        </ion-label>
+      </ion-item>
+      <ion-fab right bottom>
+        <button ion-button icon-start color="danger" outline (click)="logOut()">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Logout
+        </button>
+      </ion-fab>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav
+    [root]="rootPage"
+    #content
+    swipeBackEnabled="false"
+    [class]="selectedTheme"
+  ></ion-nav>
+</div>

@@ -1,0 +1,36 @@
+page-view {
+  ion-avatar img {
+    height: 60px;
+    width: 65px;
+    margin: auto;
+  }
+  .card-ios,
+  .card-md {
+    width: 100%;
+    margin-left: 0px !important;
+    padding-bottom: 2vw;
+  }
+  .body-img {
+    background-image: url("../assets/imgs/kol.jpg");
+  }
+
+  .button-ios-danger,
+  .button-md-danger {
+    width: 96%;
+    margin-left: 2vw;
+  }
+  .card-content-ios,
+  .card-content-md {
+    text-align: center;
+  }
+
+  .bt1.disable-hover.button.button-ios.button-outline.button-outline-ios.button-round.button-round-ios.button-block.button-block-ios.button-outline-ios-secondary,
+  .bt1.disable-hover.button.button-md.button-outline.button-outline-md.button-round.button-round-md.button-block.button-block-md.button-outline-md-secondary {
+    padding: 10px;
+    width: 208px;
+  }
+  .sb.searchbar.searchbar-ios.searchbar-animated,
+  .sb.searchbar.searchbar-md.searchbar-animated {
+    margin-top: -23px;
+  }
+}

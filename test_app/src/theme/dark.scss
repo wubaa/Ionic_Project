@@ -1,0 +1,44 @@
+.dark {
+  ion-content {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .toolbar-title {
+    color: #ffffff;
+  }
+
+  .header .toolbar-background {
+    border-color: #ffffff;
+    background-color: #333333;
+  }
+  .fab.fab-ios.fab-ios-secondary,
+  .fab.fab-md.fab-md-secondary {
+    border-color: #ffffff;
+    background-color: #6a6a6d;
+  }
+  .item.item-block.item-ios,
+  .item.item-block.item-md {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #333333;
+  }
+  .disable-hover.button.button-ios.button-default.button-default-ios.button-ios-danger,
+  .disable-hover.button.button-md.button-default.button-default-md.button-md-danger {
+    border-color: #ffffff;
+    color: #f53d3d;
+    background-color: #33333f;
+  }
+
+  .animated.zoomIn.card.card-md,
+  .animated.zoomIn.card.card-ios {
+    background-color: #535350;
+  }
+  .card.card-ios {
+    background-color: #535350;
+  }
+  .card.card-md,
+  .card.card-ios {
+    background-color: #535350;
+  }
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar hideBackButton color="secondary">
+    <ion-title>Log-in</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <ion-thumbnail item-start>
+          <img center src="assets/imgs/green.png" />
+        </ion-thumbnail>
+
+        <ion-item>
+          <ion-label floating color="secondary" class="animated lightSpeedIn"
+            >Username</ion-label
+          >
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating color="secondary" class="animated lightSpeedIn"
+            >Password</ion-label
+          >
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <button
+          ion-button
+          color="secondary"
+          icon-start
+          round
+          block
+          (click)="login()"
+        >
+          <ion-icon name="log-in"></ion-icon>
+          LogIn
+        </button>
+        <p text-center margin-top class="animated lightSpeedIn delay-1s">
+          New User?<a (click)="signUp()"> Create Account</a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

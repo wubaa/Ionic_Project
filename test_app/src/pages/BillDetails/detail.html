@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <div class="lb"><label float-right (click)="editEnabled()">Edit</label></div>
+    <ion-title>Bill Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <div>
+          <div>
+            <h4><label>Product Name:</label><ion-input type="text" disabled="{{isDisable}}" [(ngModel)]="billData.productName"></ion-input></h4>
+          </div>
+          <div>
+            <h4><label>Start Date:</label><ion-input type="text" disabled="{{isDisable}}" value="{{data.employee_salary}}"></ion-input></h4>
+          </div>
+          <div>
+            <h4><label>End Date:</label><ion-input type="text" disabled="{{isDisable}}" value="{{data.employee_age}}"></ion-input></h4>
+          </div>
+          <div>
+            <h4><label>Reminder Date:</label><ion-input type="text" disabled="{{isDisable}}"></ion-input></h4>
+          </div>
+        </div>
+        <button ion-button color="secondary" icon-start round block (click)="doConfirm()">
+          Done
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

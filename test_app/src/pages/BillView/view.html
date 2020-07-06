@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle icon-only item-left>
+      <ion-icon name="menu" class="animated slideInUp"></ion-icon>
+    </button>
+    <ion-title>Bill List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="refrshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <ion-searchbar
+          (ionInput)="getItems($event)"
+          class="sb"
+          showCancelButton="focus"
+          animated
+          class="animated zoomIn"
+        ></ion-searchbar>
+        <!-- showing all the bills in card view -->
+        <ion-card
+          *ngFor="let items of billDetails; let cardIndex=index"
+          class="animated zoomIn"
+        >
+          <ion-card-header>
+            <ion-avatar item-start>
+              <img src="../assets/imgs/green.png" />
+            </ion-avatar>
+          </ion-card-header>
+          <ion-card-content (click)="detail(items)">
+            <ion-label>{{items.id}}</ion-label>
+            <ion-label>{{items.employee_name}}</ion-label>
+            <ion-label>{{items.employee_salary}}</ion-label>
+            <ion-label>{{items.employee_age}}</ion-label>
+          </ion-card-content>
+          <button
+            ion-button
+            icon-start
+            color="danger"
+            (click)="deleteBill(items.id,cardIndex)"
+          >
+            <ion-icon name="trash"></ion-icon>
+            Delete
+          </button>
+        </ion-card>
+        <!-- end of card -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab right bottom>
+    <button ion-fab mini color="secondary" (click)="bill()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

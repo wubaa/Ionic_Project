@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="pop()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <ion-avatar item-start>
+          <img src="../assets/imgs/green.png" />
+        </ion-avatar>
+        <p text-center>Admin</p>
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label
+                >Phone number: <ion-label>+919876543210</ion-label></ion-label
+              ></ion-item
+            >
+
+            <hr />
+            <ion-item>
+              <ion-label
+                >E-mail: <ion-label>Admin@Devloper.com</ion-label></ion-label
+              >
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+        <p class="last" text-center>
+          Version 1.0.0
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

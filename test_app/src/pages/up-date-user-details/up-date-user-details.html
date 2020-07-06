@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <div class="lb">
+      <label float-right (click)="editEnabled()">Edit</label>
+    </div>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="pop()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Update User Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col col-md-6 offset-md-3>
+        <div>
+          <div>
+            <h4>
+              <label>User Name:</label
+              ><ion-input
+                type="text"
+                disabled="{{isDisable}}"
+                value="{{userData.username}}"
+              ></ion-input>
+            </h4>
+          </div>
+          <div>
+            <h4>
+              <label>Phone Number:</label
+              ><ion-input
+                type="tel"
+                disabled="{{isDisable}}"
+                value="{{userData.phoneNo}}"
+              ></ion-input>
+            </h4>
+          </div>
+          <div>
+            <h4>
+              <label>E-mail:</label
+              ><ion-input
+                type="text"
+                disabled="{{isDisable}}"
+                value="{{userData.email}}"
+              ></ion-input>
+            </h4>
+          </div>
+          <div>
+            <h4>
+              <label>Change Password:</label
+              ><ion-input type="text" disabled="{{isDisable}}"></ion-input>
+            </h4>
+          </div>
+        </div>
+        <button
+          ion-button
+          color="secondary"
+          icon-start
+          round
+          block
+          (click)="doConfirm()"
+        >
+          Done
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

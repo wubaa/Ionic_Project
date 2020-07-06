@@ -1,0 +1,21 @@
+page-bill {
+  .datetime.datetime-ios,
+  .datetime.datetime-md {
+    padding-top: 50px;
+  }
+
+  .item.item-block.item-ios.item-input.item-textarea,
+  .item.item-block.item-m.item-input.item-textarea {
+    padding-top: 90px;
+  }
+
+  .disable-hover.button.button-ios.button-default.button-default-ios.button-round.button-round-ios.button-block.button-block-ios.button-ios-secondary,
+  .disable-hover.button.button-md.button-default.button-default-md.button-round.button-round-md.button-block.button-block-md.button-md-secondary {
+    margin-top: 70px;
+  }
+  img {
+    max-width: 100px;
+    max-height: 100%;
+    margin: auto;
+  }
+}

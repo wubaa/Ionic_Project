@@ -1,0 +1,21 @@
+page-sign-up{
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  ion-thumbnail {
+
+    max-width: 30%;
+    max-height: 20vh;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+  }
+  .disable-hover.button.button-ios.button-default.button-default-ios.button-round.button-round-ios.button-block.button-block-ios.button-ios-secondary,
+  .disable-hover.button.button-md.button-default.button-default-md.button-round.button-round-md.button-block.button-block-md.button-md-secondary {
+    margin-top: 50px;
+
+}
+}
